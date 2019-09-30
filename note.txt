@@ -11,3 +11,13 @@ disown %[number] - disown the process(no more terminal will be owner), so comman
 the % infront of the job number in the commands tells kill you're talking about jobs and not processes
 
 
+2. Console GET, POST, PUT, DELETE
+Get: 
+  curl http://127.0.0.1:8080/kv
+Post: 
+  curl --data "{\"key\":\"key1\",\"value\":\"value2\"}" http://127.0.0.1:8080/kv
+PUT: 
+  curl -X PUT -d "{\"value\":\"value2\"}" http://127.0.0.1:8080/kv/key3
+Delete: 
+  curl -X DELETE http://127.0.0.1:8080/kv/key5
+
