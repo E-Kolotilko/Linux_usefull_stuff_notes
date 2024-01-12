@@ -21,3 +21,9 @@ PUT:
 Delete: 
   curl -X DELETE http://127.0.0.1:8080/kv/key5
 
+
+3. Take CUPS down and keep it down
+systemctl disable cups.socket cups.path. cups.service
+systemctl kill --signal=SIGKILL cups.service
+systemctl stop cups.socket cups.path
+
